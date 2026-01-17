@@ -1,0 +1,24 @@
+# Build outputs
+bin/
+obj/
+
+# VS/IDE folders
+.vscode/
+.idea/
+
+# User-specific
+*.user
+*.userosscache
+*.suo
+*.swp
+.DS_Store
+
+# Test artifacts
+TestResults/
+
+# Dotnet
+*.generated.cs
+*.metaproj
+
+# Other
+*.log
