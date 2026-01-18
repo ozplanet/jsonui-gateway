@@ -1,11 +1,9 @@
-@using JsonUi.Ui.Layout
-
 <Router AppAssembly="typeof(App).Assembly">
     <Found Context="routeData">
-        <RouteView RouteData="routeData" DefaultLayout="typeof(MainLayout)" />
+        <RouteView RouteData="routeData" DefaultLayout="typeof(JsonUi.Ui.Shared.MainLayout)" />
     </Found>
     <NotFound>
-        <LayoutView Layout="typeof(MainLayout)">
+        <LayoutView Layout="typeof(JsonUi.Ui.Shared.MainLayout)">
             <p class="text-muted">Sorry, we couldn't find that page.</p>
         </LayoutView>
     </NotFound>
