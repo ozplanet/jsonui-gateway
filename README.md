@@ -61,3 +61,11 @@ services:
 - Issues follow `.github/ISSUE_TEMPLATE/*` (feature / bug).
 - PRs use `.github/pull_request_template.md` and must document security considerations.
 - Coding agents run verification loops (plan -> implement -> cross-review -> drift audit) as defined in `docs/99-prompts/agent-prompts.md`.
+
+## Syncing Private Repos
+Use `push-private-repos.sh` (in `project-015/`) to refresh the Forgejo SSH host key and push all private repos (`business-backend`, `jsonui-ui`, `business-docs`) after a restart:
+```bash
+cd /home/data/Projects/projects/Business/project-015
+./push-private-repos.sh
+```
+The script removes stale `[ozserver]:222` entries from `~/.ssh/known_hosts`, re-adds the current host key, and pushes each repo’s current branch if the working tree is clean.
