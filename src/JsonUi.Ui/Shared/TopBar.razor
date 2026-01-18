@@ -1,0 +1,14 @@
+<header class="topbar">
+    <div class="topbar__left">
+        <button class="icon-button" @onclick="ToggleNav">☰</button>
+        <div class="status-pill" title="Service health">Online</div>
+    </div>
+    <div class="topbar__right">
+        <ThemeToggle />
+        <button class="primary-button">New API Key</button>
+    </div>
+</header>
+
+@code {
+    [Parameter] public EventCallback ToggleNav { get; set; }
+}

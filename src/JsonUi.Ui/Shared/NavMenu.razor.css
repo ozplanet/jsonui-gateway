@@ -1,0 +1,9 @@
+.sidebar {
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebar__nav {
+  list-style: none;
+  padding: 0;
+}

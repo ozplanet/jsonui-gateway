@@ -1,0 +1,13 @@
+@inherits LayoutComponentBase
+
+<PageThemeProvider>
+    <div class="app-shell">
+        <NavMenu />
+        <main>
+            <TopBar />
+            <section class="content-wrapper">
+                @Body
+            </section>
+        </main>
+    </div>
+</PageThemeProvider>

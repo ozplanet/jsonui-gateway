@@ -1,0 +1,25 @@
+@using JsonUi.Ui.Theming
+
+<div class="theme-toggle">
+    <button class="icon-button" @onclick="TogglePalette">🎨</button>
+</div>
+
+@code {
+    [CascadingParameter] public ThemeModel Theme { get; set; } = ThemeModel.Default();
+    private int _currentIndex;
+
+    protected override void OnInitialized()
+    {
+        _currentIndex = ThemePalette.Presets.ToList().FindIndex(t => t == Theme);
+        if (_currentIndex < 0)
+        {
+            _currentIndex = 0;
+        }
+    }
+
+    private void TogglePalette()
+    {
+        _currentIndex = (_currentIndex + 1) % ThemePalette.Presets.Count;
+        // TODO: raise event to update theme once editor implemented
+    }
+}

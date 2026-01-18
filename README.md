@@ -47,6 +47,16 @@ services:
 2. Add ntfy integration with `ntfy_publish` tool.
 3. Add TMDB GET tool with caching enabled and demonstrate cache stats/purge.
 
+## Current Progress
+- Backend MVP finished: admin APIs for secrets, integrations, actions, logging, Swagger import, MCP endpoints, Serilog/rate limiting infrastructure.
+- Implementation plan lives at `docs/implementation-plan.md` and stays in sync with work.
+- Blazor admin shell added (Sonarr/Radarr-style nav + theming), but data pages are placeholders for now.
+
+### Next Steps
+1. Flesh out Secrets/Integrations/Actions/Logging/Swagger pages and hook them to the admin API.
+2. Prompt for/stash API key client-side with warning banner until rotation UX exists.
+3. Add automated tests (encryption, SSRF guard, controllers) and clear build warnings (TimeProvider, LoggerMessage, AesGcm tag size, authorization builder).
+
 ## Homelab Setup (Step-by-Step)
 You do not need to be a professional admin to run JsonUI. Follow these steps and copy/paste the commands as-is. Anything that looks like `UPPER_CASE_TEXT` is something you choose (for example, the master key or API URLs).
 

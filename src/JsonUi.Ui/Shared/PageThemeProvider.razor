@@ -1,0 +1,10 @@
+@using JsonUi.Ui.Theming
+
+<CascadingValue Value="Theme">
+    @ChildContent
+</CascadingValue>
+
+@code {
+    [Parameter] public RenderFragment? ChildContent { get; set; }
+    private ThemeModel Theme { get; } = ThemeModel.Default();
+}
